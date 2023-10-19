@@ -88,6 +88,13 @@ NUMBER_TYPES: tuple[EcomaxNumberEntityDescription, ...] = (
         native_unit_of_measurement=CALORIFIC_KWH_KG,
         product_types={ProductType.ECOMAX_P},
     ),
+    EcomaxNumberEntityDescription(
+        key="water_heater_hysteresis",  # Entity key as provided by PyPlumio.
+        name="Water heater hysteresis",  # Entity name as it will be displayed in HASS.
+        native_step=1,  # Slider step.
+        native_unit_of_measurement=UnitOfTemperature.CELSIUS,  # This entity value is in degrees Celsius.
+        product_types={ProductType.ECOMAX_P},  # This entity will be added for ecoMAX P.
+    ),
 )
 
 
