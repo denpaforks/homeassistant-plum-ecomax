@@ -188,6 +188,12 @@ MIXER_NUMBER_TYPES: tuple[EcomaxMixerNumberEntityDescription, ...] = (
         native_unit_of_measurement=UnitOfTemperature.CELSIUS,
         product_types={ProductType.ECOMAX_I},
     ),
+    EcomaxMixerNumberEntityDescription(
+        key="heat_curve",  # Entity key as provided by PyPlumio.
+        name="Heat Curve",  # Entity name as it will be displayed in HASS.
+        native_step=0.1,  # Slider step.
+        product_types={ProductType.ECOMAX_P},  # This entity will be added for ecoMAX P.
+    ),
 )
 
 
